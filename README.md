@@ -60,33 +60,25 @@ Once in jupyter lab, open the credit_risk_resampling.ipynb and run each cell in 
 
 ### Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
-
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+The purpose of this analysis was to compare a logistic regression supervised learning model on credit data both with and without utilizing oversampling. The model took in multiple different credit data of clients as well as if the loan was high risk or healthy in order for the model to attempt to predict whether future loans are healthy or risky based on their credit profile. The machine learning process began by creating a logistic regression model and fitting the model to the data. From there the model was able to make predictions on test data and was analyzed for accuracy using a confusion matrix. This process was then repeated with the model using data that was oversampled. 
 
 ### Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
+* Machine Learning Model 1 (Logistic Regression):
+  * Accuracy = 94.90%
+  * Precision = 1.00 and 0.86 for healthy and risky loans respectively 
+  * Recall = 1.00 and 0.90 for healthy and risky loans respectively 
 
-* Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
 
 
-
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+* Machine Learning Model 2 (Oversampled Data Logistic Regression):.
+  * Accuracy = 99.65%
+  * Precision = 1.00 and 0.86 for healthy and risky loans respectively 
+  * Recall = 0.99 and 1.00 for healthy and risky loans respectively
 
 ### Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+The oversampled model performs best overall for both metrics with a higher accuracy score, better recall, and equally as good precision as the original model. Additionally, the original model is no better than guessing every loan is healthy, which would have yielded an accuracy of nearly 97%, while the oversampled model had an accuracy of 99.65%.
 
 ---
 
